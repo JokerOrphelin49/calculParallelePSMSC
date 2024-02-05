@@ -15,7 +15,7 @@ void p2p_i_transmit_A(int p, int q, Matrix *A, int i, int l) {
   Block * Ail;
   Ail =  & A->blocks[i][l];
   b = A->b;
-  tag = i * (A->nb) + l;
+  tag = l * A->mb + i;
   /* TODO : transmit A[i,l] using MPI_Issend/recv */
   if (me == Ail->owner /* I own A[i,l]*/ ) {
     // MPI_Issend Ail to my row
@@ -43,19 +43,17 @@ void p2p_i_transmit_B(int p, int q, Matrix *B, int l, int j) {
   Block * Blj;
   Blj =  & B->blocks[l][j];
   b = B->b;
-  tag = l * (B->nb) + j; 
+  tag = l * B->nb + j;
   /* TODO : transmit B[l,j] using MPI_Issend/recv */
   if (me == Blj->owner /* I own B[l,j]*/ ) {
     // MPI_Issend Blj to my column
     for (int k = 0; k < p; k++) {
     	node = get_node(p, q, k, my_col);
     	if (node != me) {
-    		printf("%d Sent B\n", me);
     		MPI_Issend (Blj->c , b*b , MPI_FLOAT, node, tag, MPI_COMM_WORLD, &(Blj->request));
     	}
     }
   } else if (Blj->col == my_col /* B[l,j] is stored on my column */) {
-    printf("%d Received B\n", me);
     Blj->c = calloc(b*b,sizeof(float));
     // MPI_Irecv B[l,j]
     MPI_Irecv(Blj->c , b*b , MPI_FLOAT, Blj->owner, tag, MPI_COMM_WORLD, &(Blj->request));
@@ -76,6 +74,14 @@ void p2p_i_wait_AB(int p, int q, Matrix *A, Matrix* B, Matrix* C, int l) {
     if (Ail->row == my_row && Ail->owner != me/* I need A[i,l] for my computation */) {
       // MPI_Wait Ail
       MPI_Wait(&(Ail->request), &status);
+    } else if (Ail->row == my_row) {
+      for (int k = 0; k < p; k++) {
+    	int node = get_node(p, q, k, my_col);
+    	if (node != me) {
+    		MPI_Wait(&(Ail->request), &status);
+    	}
+    }
+      
     }
   }
   for (j =0; j < B->nb; j++) {
@@ -83,9 +89,15 @@ void p2p_i_wait_AB(int p, int q, Matrix *A, Matrix* B, Matrix* C, int l) {
     if (Blj->col == my_col && Blj->owner != me/* I need B[l,j] for my computation */) {
       // MPI_Wait Blj
       MPI_Wait(&(Blj->request), &status);
+    }else if (Blj->col == my_col) {
+      for (int k = 0; k < p; k++) {
+    	int node = get_node(p, q, k, my_col);
+    	if (node != me) {
+    		MPI_Wait(&(Ail->request), &status);
+    	}
+    	}
     }
   }
 
-  /* Alternative suggestion : iterate over blocks of C */
   /* end TODO */
 }

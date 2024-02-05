@@ -14,22 +14,22 @@ export MKL_NUM_THREADS=1
 mpi_options="-platform platforms/cluster_crossbar.xml -hostfile hostfiles/cluster_hostfile.txt -np $P"
 b=256
 iter=5
-traces="bench_traces"
-out="bench_outputs"
-csv="bench.csv"
+traces="benchmnk_traces"
+out="benchmnk_outputs"
+csv="benchmnk.csv"
 echo m,n,k,b,p,q,algo,lookahead,gflops > $csv
-for i in 4 8 12
+for i in 1 2 3 4
 do
-  n=$((i*b))
-  m=$n
-  k=$n
+  n=$((2*i*b))
+  m=$((3*i*b))
+  k=$((i*b))
   la=0
   options="-c"
   for algo in p2p bcast
   do
     	run
   done
-  for la in $(seq 1 $((n/b)))
+  for la in $(seq 1 $((k/b)))
   do 
   	algo="p2p-i-la"
   	options="-c -l $la"

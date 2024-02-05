@@ -1,0 +1,46 @@
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/privatization' to '1'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/np' to '16'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/hostfile' to 'hostfiles/cluster_hostfile.txt'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'smpi_simgrid.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/smpi' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'surf/precision' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'SMPI'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/home/flauriol/tmp_simgrid'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/tmp'
+[0.000000] [smpi_config/INFO] You did not set the power of the host running the simulation.  The timings will certainly not be accurate.  Use the option "--cfg=smpi/host-speed:<flops>" to set its value.  Check https://simgrid.org/doc/latest/Configuring_SimGrid.html#automatic-benchmarking-of-smpi-code for more information.
+[host-0.hawaii.edu:0:(1) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-1.hawaii.edu:1:(2) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-2.hawaii.edu:2:(3) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-3.hawaii.edu:3:(4) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-4.hawaii.edu:4:(5) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-5.hawaii.edu:5:(6) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-6.hawaii.edu:6:(7) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-7.hawaii.edu:7:(8) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-8.hawaii.edu:8:(9) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-9.hawaii.edu:9:(10) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-10.hawaii.edu:10:(11) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-11.hawaii.edu:11:(12) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-12.hawaii.edu:12:(13) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-13.hawaii.edu:13:(14) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-14.hawaii.edu:14:(15) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[host-15.hawaii.edu:15:(16) 0.000000] ./src/smpi/internals/smpi_global.cpp:308: [smpi_kernel/WARNING] SMPI process did not return 0. Return value : 1
+[0.000000] [smpi/INFO] Stalling SMPI instance: smpirun. Do all your MPI ranks call MPI_Finalize()?
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+Wrong value for algo, only p2p, p2p-i-la and p2p-bcast authorized
+build/bin/main --cfg=smpi/privatization:1 --cfg=tracing:yes --cfg=tracing/filename:smpi_simgrid.trace --cfg=tracing/smpi:yes --cfg=surf/precision:1e-9 --cfg=network/model:SMPI --cfg=smpi/tmpdir:/home/flauriol/tmp_simgrid --cfg=smpi/tmpdir:/tmp platforms/cluster_crossbar.xml
+Execution failed with code 1.

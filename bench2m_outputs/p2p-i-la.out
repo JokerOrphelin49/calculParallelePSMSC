@@ -1,0 +1,26 @@
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/privatization' to '1'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/np' to '4'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/hostfile' to 'hostfiles/cluster_hostfile.txt'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'smpi_simgrid.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/smpi' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'surf/precision' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'SMPI'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/home/flauriol/tmp_simgrid'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/tmp'
+[0.000000] [smpi_config/INFO] You did not set the power of the host running the simulation.  The timings will certainly not be accurate.  Use the option "--cfg=smpi/host-speed:<flops>" to set its value.  Check https://simgrid.org/doc/latest/Configuring_SimGrid.html#automatic-benchmarking-of-smpi-code for more information.
+[marcheursblancs.enseeiht.fr] (p2p-i-la) measured_wtime = 0.305283s (la=7) | 75.400005 Gflop/s
+[marcheursblancs.enseeiht.fr] (g) measured_wtime = 0.221361s | 103.985529 Gflop/s
+GEMM is correct ( 0.00000e+00)
+[marcheursblancs.enseeiht.fr] (p2p-i-la) measured_wtime = 0.297503s (la=7) | 77.371794 Gflop/s
+[marcheursblancs.enseeiht.fr] (g) measured_wtime = 0.218112s | 105.534494 Gflop/s
+GEMM is correct ( 0.00000e+00)
+[marcheursblancs.enseeiht.fr] (p2p-i-la) measured_wtime = 0.289601s (la=7) | 79.482945 Gflop/s
+[marcheursblancs.enseeiht.fr] (g) measured_wtime = 0.220360s | 104.457891 Gflop/s
+GEMM is correct ( 0.00000e+00)
+[marcheursblancs.enseeiht.fr] (p2p-i-la) measured_wtime = 0.299713s (la=7) | 76.801278 Gflop/s
+[marcheursblancs.enseeiht.fr] (g) measured_wtime = 0.218778s | 105.213232 Gflop/s
+GEMM is correct ( 0.00000e+00)
+[marcheursblancs.enseeiht.fr] (p2p-i-la) measured_wtime = 0.294303s (la=7) | 78.213067 Gflop/s
+[marcheursblancs.enseeiht.fr] (g) measured_wtime = 0.219771s | 104.737843 Gflop/s
+GEMM is correct ( 0.00000e+00)

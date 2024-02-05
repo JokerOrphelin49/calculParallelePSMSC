@@ -1,0 +1,10 @@
+First command
+smpirun -platform platforms/cluster_crossbar.xml -hostfile hostfiles/cluster_hostfile.txt -np 4 ./build/bin/main -p 2 -q 2 -n 10 -b 5 --algorithm p2p --niter 2 -c -v
+Second command
+smpirun -platform platforms/cluster_crossbar.xml -hostfile hostfiles/cluster_hostfile.txt -np 4 -trace ./build/bin/main -p 2 -q 2 -n 10 -b 5 --algorithm p2p --niter 2 -c -v
+Third command
+smpirun -platform platforms/cluster_crossbar.xml -hostfile hostfiles/cluster_hostfile.txt -np 4 ./build/bin/main -p 2 -q 2 -n 10 -b 5 --algorithm bcast --niter 2 -c -v
+Last command
+smpirun -platform platforms/cluster_crossbar.xml -hostfile hostfiles/cluster_hostfile.txt -np 4 ./build/bin/main -p 2 -q 2 -n 10 -b 5 --algorithm p2p-i-la --lookahead 2 --niter 2 -c -v
+
+
