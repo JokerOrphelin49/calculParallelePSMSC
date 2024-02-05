@@ -58,7 +58,7 @@ void p2p_i_transmit_B(int p, int q, Matrix *B, int l, int j) {
     printf("%d Received B\n", me);
     Blj->c = calloc(b*b,sizeof(float));
     // MPI_Irecv B[l,j]
-    MPI_Irecv(Blj->c , b*b , MPI_FLOAT, my_col, tag, MPI_COMM_WORLD, &(Blj->request));
+    MPI_Irecv(Blj->c , b*b , MPI_FLOAT, Blj->owner, tag, MPI_COMM_WORLD, &(Blj->request));
   }
   /* end TODO */
 }
