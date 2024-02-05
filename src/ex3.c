@@ -75,14 +75,14 @@ void p2p_i_wait_AB(int p, int q, Matrix *A, Matrix* B, Matrix* C, int l) {
     Ail = &(A->blocks[i][l]);
     if (Ail->row == my_row && Ail->owner != me/* I need A[i,l] for my computation */) {
       // MPI_Wait Ail
-      MPI_Wait(&(Ail->request), MPI_STATUS_IGNORE);
+      MPI_Wait(&(Ail->request), &status);
     }
   }
   for (j =0; j < B->nb; j++) {
     Blj = &(B->blocks[l][j]);
     if (Blj->col == my_col && Blj->owner != me/* I need B[l,j] for my computation */) {
       // MPI_Wait Blj
-      MPI_Wait(&(Blj->request), MPI_STATUS_IGNORE);
+      MPI_Wait(&(Blj->request), &status);
     }
   }
 
