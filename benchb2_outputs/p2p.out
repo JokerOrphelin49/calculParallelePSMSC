@@ -1,0 +1,26 @@
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/privatization' to '1'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/np' to '4'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/hostfile' to 'hostfiles/cluster_hostfile.txt'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/filename' to 'smpi_simgrid.trace'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing/smpi' to 'yes'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'surf/precision' to '1e-9'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'network/model' to 'SMPI'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/home/flauriol/tmp_simgrid'
+[0.000000] [xbt_cfg/INFO] Configuration change: Set 'smpi/tmpdir' to '/tmp'
+[0.000000] [smpi_config/INFO] You did not set the power of the host running the simulation.  The timings will certainly not be accurate.  Use the option "--cfg=smpi/host-speed:<flops>" to set its value.  Check https://simgrid.org/doc/latest/Configuring_SimGrid.html#automatic-benchmarking-of-smpi-code for more information.
+[hydre.enseeiht.fr] (p2p) measured_wtime = 1.280285s (la=0) | 71.916301 Gflop/s
+[hydre.enseeiht.fr] (g) measured_wtime = 0.837689s | 109.913540 Gflop/s
+algorithm is not GEMM by  1.39455e+06
+[hydre.enseeiht.fr] (p2p) measured_wtime = 1.319007s (la=0) | 69.805057 Gflop/s
+[hydre.enseeiht.fr] (g) measured_wtime = 0.834948s | 110.274366 Gflop/s
+algorithm is not GEMM by  1.39455e+06
+[hydre.enseeiht.fr] (p2p) measured_wtime = 1.294139s (la=0) | 71.146422 Gflop/s
+[hydre.enseeiht.fr] (g) measured_wtime = 0.838436s | 109.815610 Gflop/s
+algorithm is not GEMM by  1.39455e+06
+[hydre.enseeiht.fr] (p2p) measured_wtime = 1.272501s (la=0) | 72.356220 Gflop/s
+[hydre.enseeiht.fr] (g) measured_wtime = 0.836934s | 110.012695 Gflop/s
+algorithm is not GEMM by  1.39455e+06
+[hydre.enseeiht.fr] (p2p) measured_wtime = 1.281964s (la=0) | 71.822115 Gflop/s
+[hydre.enseeiht.fr] (g) measured_wtime = 0.835623s | 110.185285 Gflop/s
+algorithm is not GEMM by  1.39455e+06
